@@ -1,7 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import env from 'dotenv'
-
+import mailRouter from "./router/mailRouter.js";
 
 env.config()
 
@@ -10,6 +10,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
+app.use('/mail', mailRouter)
 
 const start = async () => {
     try {
@@ -20,5 +21,6 @@ const start = async () => {
         console.log(e)
     }
 }
+
 
 start()
