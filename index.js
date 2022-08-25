@@ -15,7 +15,7 @@ app.use('/mail', mailRouter)
 const start = async () => {
     try {
         app.listen(PORT, () => {
-            console.log(`Mail and databases microservice started`)
+            console.log(`Mail and databases microservice started`, `Порт: ${PORT}`)
         })
     } catch (e) {
         console.log(e)

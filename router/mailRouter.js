@@ -3,6 +3,6 @@ import mailController from "../controllers/MailController.js";
 
 const mailRouter = new Router()
 
-mailRouter.get('/mailCode', mailController.getOne)
+mailRouter.post('/code', mailController.getOne)
 
 export default mailRouter
